@@ -3,7 +3,7 @@ import random
 import time
 from discord.ext import commands
 
-TOKEN = 'NTE2MDcyNTY3MDk0NjQwNjQw.DtuWhw.Lky00QEk2A_VxGFkx354I2k8J14'
+TOKEN = 'NTE4OTExOTMzMzk5OTU3NTA1.DuXrIw.Rx22oTju3zx4UU8oqFClnDMGUrM'
 client = commands.Bot(command_prefix = 's!')
 client.remove_command('help')
 
