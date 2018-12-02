@@ -4,7 +4,7 @@ import time
 from discord.ext import commands
 
 TOKEN = 'NTE2MDcyNTY3MDk0NjQwNjQw.DtuWhw.Lky00QEk2A_VxGFkx354I2k8J14'
-client = commands.Bot(command_prefix = '/')
+client = commands.Bot(command_prefix = 's!')
 client.remove_command('help')
 
 @client.event
@@ -16,7 +16,7 @@ async def on_member_join(member):
 @client.event
 async def on_ready():
     serverCount = len(client.servers)
-    await client.change_presence(game=discord.Game(name='{} servers | /help'.format(serverCount), type = 2, status=discord.Status.dnd))
+    await client.change_presence(game=discord.Game(name='{} servers | s!help'.format(serverCount), type = 2, status=discord.Status.dnd))
     print('Hello')
                                                                    
 @client.command(pass_context=True)
