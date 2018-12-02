@@ -12,10 +12,6 @@ class Fun:
 	async def ping(self):
 		await self.client.say('Pong!')
 
-class Member:
-    def __init__(self, client):
-        self.client = client
-
     @commands.command()
     async def joined(self, member : discord.Member):
         """Says when a member joined."""
