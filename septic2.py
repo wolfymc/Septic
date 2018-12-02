@@ -16,8 +16,12 @@ async def on_member_join(member):
 @client.event
 async def on_ready():
     serverCount = len(client.servers)
-    await client.change_presence(game=discord.Game(name='{} members | s!help'.format(memberCount), type = 2, status=discord.Status.dnd))
+    await client.change_presence(game=discord.Game(name='{} servers | s!help'.format(serverCount), type = 2, status=discord.Status.dnd))
     print('Hello')
+
+@client.event
+async def on_ready():
+    print("Bot started in %s server(s), with %s users." % (len(client.servers), len(server.members)))
                                                                    
 @client.command(pass_context=True)
 async def serverinfo(ctx):
