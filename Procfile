@@ -1,1 +1,1 @@
-worker: python septic.py
+worker: python septic2.py
