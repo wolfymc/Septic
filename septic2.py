@@ -5,7 +5,6 @@ from discord.ext import commands
 
 TOKEN = 'NTE4OTExOTMzMzk5OTU3NTA1.DuXrIw.Rx22oTju3zx4UU8oqFClnDMGUrM'
 client = commands.Bot(command_prefix = 's!')
-client.remove_command('help')
 
 @client.event
 async def on_member_join(member):
@@ -54,7 +53,7 @@ async def purge(ctx, amount=100):
 	await client.say('Messages deleted.')
 
 @client.command(pass_context=True)
-async def help(ctx):
+async def cmds(ctx):
 	author = ctx.message.author
 	
 	embed = discord.Embed(
@@ -72,7 +71,7 @@ async def help(ctx):
 	embed.add_field(name='say', value='says anything you want', inline=True)
 	
 	await client.send_message(author, embed=embed)
-	await client.say('Check your inventory.')
+	await client.say('Check your dms.')
 	
 @client.command(pass_context=True)
 async def kick(ctx, user: discord.Member = None):
